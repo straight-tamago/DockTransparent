@@ -251,14 +251,14 @@ struct ContentView: View {
         for i in 0..<5 {
             DispatchQueue.main.asyncAfter(deadline: .now() + DispatchTimeInterval.seconds(i/10)) {
                 TargetFilesPath.forEach {
-                    LogMessage = overwrite(TargetFilePath: $0.path, OverwriteData: "BOM")
+                    LogMessage = overwrite(TargetFilePath: $0.path, OverwriteData: "bpl")
                 }
                 self.Respring_confirm = true
             }
         }
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             TargetFilesPath.forEach {
-                LogMessage = overwrite(TargetFilePath: $0.path, OverwriteData: "BOM")
+                LogMessage = overwrite(TargetFilePath: $0.path, OverwriteData: "bpl")
             }
         }
     }
